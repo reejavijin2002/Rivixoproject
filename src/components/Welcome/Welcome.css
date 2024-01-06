@@ -1,0 +1,99 @@
+.welcome-container {
+    width: 100%;
+    background: linear-gradient(180deg, #4A78A1 0%, #56B9CF 45.83%, #57BDD3 99.54%);
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.welcome-container h3 {
+    color: #FFF;
+    text-align: left;
+    font-family: 'Satoshi';
+    font-size: 36px;
+    font-style: normal;
+    padding-top: 20px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.welcome-container h5 {
+    color: #FFF;
+    text-align: left;
+    padding-top: 10px;
+    font-family: 'Satoshi';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.welcome-container p {
+    color: #ffffff;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 6px;
+}
+
+.menu {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu p {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Satoshi';
+    padding-top: 14px;
+    font-size: 16px;
+}
+
+.meetings {
+    padding-bottom: 60px;
+}
+
+.logout p {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.log-icon {
+    color: #FFF;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 790px) {
+    .welcome-container {
+        width: 100%;
+        background: var(--final, linear-gradient(180deg, #4A78A1 0%, #56B9CF 45.83%, #57BDD3 99.54%));
+        min-height: 100vh;
+        padding: 20px 30px;
+    }
+    .welcome-container h3 {
+        font-size: 48px;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+    .pending {
+        margin-left: 30px;
+    }
+    .calender {
+        margin-left: 30px;
+    }
+    .welcome-container h5 {
+        font-size: 28px;
+    }
+    .welcome-container p {
+        font-size: 16px;
+    }
+}

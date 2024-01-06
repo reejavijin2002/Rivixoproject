@@ -1,0 +1,16 @@
+.nomeet p {
+    display: flex;
+    height: 139px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.nomeet img {
+    height: 212px;
+    flex-shrink: 0;
+    align-self: stretch;
+}

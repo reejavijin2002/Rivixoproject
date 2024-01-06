@@ -1,0 +1,200 @@
+.Login {
+    background: linear-gradient(180deg, #4A78A1 0%, #56B9CF 33.85%, #57BDD3 99.54%);
+    width: 100%;
+    height: 80vh;
+}
+
+.Login h3 {
+    color: #ffff;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30%;
+    font-family: 'caveat';
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+.Login p {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Satoshi';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-curve {
+    background-image: url(../../assets/Images/login.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    background-position: fixed;
+}
+
+.input {
+    margin-top: 60%;
+    width: 100%;
+    padding: 8px 8px 8px 16px;
+    border-radius: 6px;
+    background-color: #e5e5e5 !important;
+    height: 48px;
+    border: none;
+}
+
+.input-mob {
+    margin-top: 25%;
+    width: 58%;
+    padding: 8px 8px 8px 16px;
+    border-radius: 6px;
+    background-color: #e5e5e5 !important;
+    height: 48px;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.pswd-visblty {
+    color: #4d4d4d;
+    margin-left: -40px;
+    margin-top: 22px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.inputpsw {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 8px 8px 16px;
+    border-radius: 6px;
+    background-color: #e5e5e5 !important;
+    height: 48px;
+    border: none;
+}
+
+.inputpsw:focus {
+    outline: none;
+}
+
+.logForm {
+    margin-top: 40px;
+    padding: 0px 25px;
+}
+
+.logForm::placeholder {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #808080;
+    font-family: 'satoshi';
+}
+
+.remember {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.remember p {
+    margin-top: 15px;
+    color: #56B9CF;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Satoshi';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 200% */
+}
+
+.toggle {
+    margin-top: 14px;
+}
+
+.logForm-mob p {
+    margin-top: 15px;
+    color: #56B9CF;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Satoshi';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 200% */
+}
+
+.web-view {
+    display: none;
+}
+
+@media only screen and (min-width: 790px) {
+    .mobile-view {
+        display: none;
+    }
+    .login-bg {
+        background: var(--final, linear-gradient(180deg, #4A78A1 0%, #56B9CF 45.83%, #57BDD3 99.54%));
+        min-height: 100vh;
+    }
+    .web-view {
+        display: block;
+    }
+    .logForm-mob-pswd {
+        display: flex;
+        justify-content: center;
+        margin-left: 19%;
+    }
+    .welcome h6 {
+        color: #FFF;
+        text-align: center;
+        font-family: Caveat;
+        font-size: 76px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -1.52px;
+        padding-top: 35vh;
+    }
+    .welcome p {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Satoshi';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .login-right-curve {
+        background-image: url(../../assets/Images/web-curve.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-height: 100vh;
+    }
+    .pswd-visblty {
+        color: #4d4d4d;
+        margin-top: 35px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .logForm-mob {
+        display: flex;
+        justify-content: center;
+        margin-left: 20%;
+    }
+    .input-mob-pswd {
+        width: 58%;
+        padding: 8px 8px 8px 16px;
+        border-radius: 6px;
+        background-color: #e5e5e5 !important;
+        height: 48px;
+        border: none;
+        margin-top: 25px;
+    }
+    .remember {
+        margin-right: 17%;
+    }
+}

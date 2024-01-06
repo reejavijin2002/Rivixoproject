@@ -1,0 +1,242 @@
+.meeting-schedule-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.prev-arrow {
+    font-size: 20px;
+    color: #121212;
+}
+
+.meeting-schedule-container h3 {
+    color: #121212;
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 18px;
+}
+
+.pad-20 {
+    padding-top: 25px;
+}
+
+.meeting-input {
+    width: 100%;
+    padding: 8px 8px 8px 8px;
+    border-radius: 6px;
+    background-color: #edecec !important;
+    height: 48px;
+    border: none;
+    margin-top: 6px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.meeting-form label {
+    color: var(--black-500808080, #808080);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 166.667% */
+    margin-top: 15px;
+}
+
+.location-icon {
+    font-size: 25px;
+    margin-top: 15px;
+    color: #4A7AA2;
+    margin-left: -35px;
+}
+
+.member-detail-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+.member-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details h3 {
+    color: #121212;
+    text-align: center;
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 15px;
+}
+
+.details p {
+    color: #ACACAC;
+    text-align: center;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: -15px;
+}
+
+.add-member {
+    color: #4A78A1;
+    text-align: center;
+    font-family: 'Satoshi';
+    padding: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: 0.3px;
+    border-radius: 6px;
+    border: 1px solid #4A78A1;
+    background: #FFF;
+    margin-top: 20px;
+}
+
+.create-btn {
+    background: var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%));
+    border-radius: 6px;
+    padding: 14px 24px;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-family: 'satoshi';
+    height: 50px;
+    margin-top: 80px;
+    position: fixed;
+    bottom: 15px;
+    width: 90%;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.status {
+    color: #1DCC00;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.status-unavlble {
+    color: #FF0800;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.padd-20 {
+    padding: 25px 2%;
+}
+
+.add-action {
+    margin-top: 10px;
+}
+
+.member-list {
+    border-radius: 20px !important;
+}
+
+.cancel {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 14px 24px;
+    text-align: center;
+    color: #4A78A1;
+    border: 1px solid #4A78A1;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-family: 'satoshi';
+    height: 50px;
+    margin-top: 80px;
+    width: 45%;
+}
+
+.done {
+    background: var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%));
+    border-radius: 6px;
+    padding: 14px 24px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-family: 'satoshi';
+    height: 50px;
+    margin-top: 80px;
+    width: 45%;
+}
+
+.lead-select-label {
+    color: #4A78A1;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-style: normal;
+    text-align: center !important;
+    font-weight: 700;
+    line-height: 20px;
+    position: fixed;
+    margin-bottom: 5px !important;
+    bottom: 70px;
+}
+
+.client-detail-btn {
+    background: var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%));
+    border-radius: 6px;
+    padding: 14px 24px;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-family: 'satoshi';
+    height: 50px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 790px) {
+    .client-detail-pad {
+        padding-top: 70px;
+    }
+    .client-detail-btn {
+        background: var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%));
+        border-radius: 6px;
+        padding: 14px 24px;
+        text-align: center;
+        color: #fff;
+        line-height: 20px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        font-size: 16px;
+        font-family: 'satoshi';
+        height: 50px;
+        margin-top: 40px;
+        width: 100%;
+    }
+}

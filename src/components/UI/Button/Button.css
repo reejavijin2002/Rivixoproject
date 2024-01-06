@@ -1,0 +1,35 @@
+.log-btn {
+    background: var(--horizon, linear-gradient(90deg, #4A78A1 0%, #56B9CF 61.28%, #57BDD3 102.05%));
+    border-radius: 6px;
+    padding: 14px 24px;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-family: 'satoshi';
+    height: 50px;
+    margin-top: 30px;
+    width: 58%;
+}
+
+@media only screen and (max-width: 790px) {
+    .log-btn {
+        background: var(--horizon, linear-gradient(90deg, #4A78A1 0%, #56B9CF 61.28%, #57BDD3 102.05%));
+        border-radius: 6px;
+        padding: 14px 24px;
+        text-align: center;
+        color: #fff;
+        line-height: 20px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        font-size: 16px;
+        font-family: 'satoshi';
+        height: 50px;
+        margin-top: 80px;
+        position: fixed;
+        bottom: 15px;
+        width: 90%;
+    }
+}

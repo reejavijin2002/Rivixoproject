@@ -1,0 +1,117 @@
+.confirmd-main {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    /* align-items: flex-start; */
+    gap: 0px;
+}
+
+.header1 {
+    width: auto;
+    display: flex;
+    /* padding: 12px 10px 8px 0px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.header-info {
+    display: flex;
+    width: auto;
+}
+
+.border {}
+
+.header-image {
+    width: 14px;
+    height: 14px;
+    margin-right: auto;
+    /* Push the element to the left */
+    /* Other styles... */
+    /* margin-left: 10px; */
+}
+
+.info-image {
+    display: flex;
+    padding: 0px 15px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.info-icon {
+    display: flex;
+    padding: 0px 15px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.header-info p {
+    color: #121212;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Satoshi';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 166.667% */
+    letter-spacing: 0.3px;
+    margin-top: 14px;
+}
+
+.travel-time {
+    color: #FF0800;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Satoshi';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.approved1-button {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 6px;
+    background: #1DCC00;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 12px;
+}
+
+.new-button {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 6px;
+    background: var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%));
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 12px;
+}
+
+.new-button1 {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 6px;
+    background: #fff;
+    border: none;
+    color: #4A7AA2;
+    width: 100%;
+    font-size: 12px;
+}
