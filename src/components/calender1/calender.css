@@ -31,30 +31,6 @@
         outline: none;
     }
     
-    .redone::before {
-        content: "";
-        position: absolute;
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background-color: red;
-        top: 2px;
-        left: 10px;
-        transform: translate(-50%, -50%);
-    }
-    
-    .greenone::before {
-        content: "";
-        position: absolute;
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background-color: #1DCC00;
-        top: 2px;
-        left: 10px;
-        transform: translate(-50%, -50%);
-    }
-    
     @media (min-width:540px) {
         .redone::before {
             content: "";
@@ -64,7 +40,7 @@
             border-radius: 50%;
             background-color: red;
             top: 2px;
-            left: 20px;
+            left: 10px;
             transform: translate(-50%, -50%);
         }
         .greenone::before {
@@ -77,5 +53,8 @@
             top: 2px;
             left: 20px;
             transform: translate(-50%, -50%);
+        }
+        .redone {
+            position: relative;
         }
     }

@@ -148,7 +148,7 @@ export default function Example({
                       ""
                     )}
                     <div className="flex flex-col"> 
-                    <div id="calenderletters">
+                    <div className="calenderletters">
                     { format(day, dayFormat).substring(0, 1)}
                     </div>
                     

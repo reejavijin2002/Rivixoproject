@@ -247,13 +247,13 @@ function MyComponent(props) {
     new Date(2024, 0, 7),
     new Date(2024, 0, 10),
     new Date(2024, 0, 13),
-    new Date(2023, 11, 15),
-    new Date(2023, 11, 17),
+    new Date(2024, 1, 5),
+    new Date(2024, 1, 17),
   ];
   const selectedStyle = {
     fontWeight: "bold",
-    width: "35px",
-    height: "35px",
+    width: "40px",
+    height: "40px",
     borderRadius: "8px",
     color: "white",
     background:

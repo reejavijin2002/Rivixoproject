@@ -275,8 +275,8 @@ function Confirmd(props) {
   };
   const selectedStyle = {
     fontWeight: "bold",
-    width: "35px",
-    height: "35px",
+    width: "40px",
+    height: "40px",
     borderRadius: "8px",
     color: "white",
     background: "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",

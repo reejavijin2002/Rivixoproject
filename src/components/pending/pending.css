@@ -603,11 +603,11 @@
         align-items: flex-start;
         gap: 4px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        width: 30vw;
+        width: 27vw;
         height: 35vh;
         top: 30%;
-        left: auto;
-        right: auto;
+        left: 35%;
+        right: 50%;
         bottom: 0;
         position: fixed;
         margin: 10px;

@@ -143,12 +143,12 @@ export default function Example({
                     )}
                   >
                     {redDays.some((redDay) => isSameDay(redDay, day)) ? (
-                      <div className="redone mb-5 mr-0 pl-30px " style={{}}></div>
+                      <div className="redone mb-5 mr-0 pl-30px" style={{}}></div>
                     ) : (
                       ""
                     )}
                     <div className="flex flex-col"> 
-                    <div id="calenderletters">
+                    <div className="calenderletters">
                     { format(day, dayFormat).substring(0, 1)}
                     </div>
                     

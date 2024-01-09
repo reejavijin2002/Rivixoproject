@@ -6,11 +6,11 @@
     border-radius: 50%;
     background-color: red;
     top: 2px;
-    left: 20px;
+    left: 15px;
     transform: translate(-50%, -50%);
 }
 
-#calenderletters {
+.calenderletters {
     color: #B8B8B8;
     text-align: center;
     font-family: normal;
