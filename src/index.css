@@ -1,79 +1,110 @@
 @font-face {
-  font-family: 'caveat';
-  src: url(./assets/fonts/Caveat-Regular.ttf);
+    font-family: 'caveat';
+    src: url(./assets/fonts/Caveat-Regular.ttf);
 }
-@import "rsuite/dist/rsuite.css";
+
 @font-face {
-  font-family: 'satoshi';
-  src: url(./assets/fonts/Satoshi-Regular.otf);
+    font-family: 'satoshi';
+    src: url(./assets/fonts/Satoshi-Regular.otf);
 }
-.nopad{
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+
+.nopad {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
+
+
+/* Import Tailwind CSS */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Import other external styles */
+
+@import "rsuite/dist/rsuite.css";
+
 /* hiding date icon */
 
 :where(.css-dev-only-do-not-override-2q8sxy).ant-picker .ant-picker-suffix {
-  display: none !important;
+    display: none !important;
 }
-:where(.css-dev-only-do-not-override-2q8sxy).ant-picker .ant-picker-input >input:placeholder-shown {
-  display: none !important;
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-picker .ant-picker-input>input:placeholder-shown {
+    display: none !important;
 }
+
 :where(.css-dev-only-do-not-override-2q8sxy).ant-select:not(.ant-select-customize-input) .ant-select-selector {
-  background-color: #edecec !important;
-  border: none !important;
+    background-color: #edecec !important;
+    border: none !important;
 }
+
 :where(.css-dev-only-do-not-override-2q8sxy).ant-select:not(.ant-select-customize-input) .ant-select-selector:focus {
-  outline: none !important;
+    outline: none !important;
 }
+
 :where(.css-dev-only-do-not-override-2q8sxy).ant-select .ant-select-arrow {
-  color: #000 !important;
+    color: #000 !important;
 }
+
 .rs-calendar-bordered .rs-calendar-table {
-  border: none !important;
+    border: none !important;
 }
+
 .rs-calendar-bordered .rs-calendar-table-header-row .rs-calendar-table-header-cell {
-  border-bottom: 0px solid #f2f2f5 !important;
+    border-bottom: 0px solid #f2f2f5 !important;
 }
-.rs-calendar-bordered .rs-calendar-table-row:not(:last-child) .rs-calendar-table-cell, .rs-calendar-bordered .rs-calendar-table-header-row .rs-calendar-table-header-cell {
-  border-bottom: 0px solid #f2f2f5 !important; 
+
+.rs-calendar-bordered .rs-calendar-table-row:not(:last-child) .rs-calendar-table-cell,
+.rs-calendar-bordered .rs-calendar-table-header-row .rs-calendar-table-header-cell {
+    border-bottom: 0px solid #f2f2f5 !important;
 }
+
 .rs-calendar-header-has-month:not(.rs-calendar-header-has-time) {
-  padding-left: 30px;
-  padding-right: 28px;
+    padding-left: 30px;
+    padding-right: 28px;
 }
+
 .rs-calendar {
-  width: 600px !important;
+    width: 600px !important;
 }
+
 .rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
-  border-radius: 10% !important;
-  background-color: #FF0800;
-  width: 40px;
-  height: 40px;
+    border-radius: 10% !important;
+    background-color: #FF0800;
+    width: 40px;
+    height: 40px;
 }
+
 .rs-calendar-panel .rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
-  border-radius: 10% !important;
-  background-color: #FF0800;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  border: none !important;
-  box-shadow: none;
+    border-radius: 10% !important;
+    background-color: #FF0800;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: none !important;
+    box-shadow: none;
 }
-.rs-calendar-panel.rs-calendar-compact .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content{
-  height: 40px !important;
-}
-.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
-  width: 35px;
-  height: 45px;
-  padding-top: 10px;
-}
-.rs-badge-independent, .rs-badge-content{
-  background-color: #FF0800 !important;
-}
+
 .rs-calendar-panel.rs-calendar-compact .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
-  height: 60px !important;
+    height: 40px !important;
 }
+
+.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
+    width: 35px;
+    height: 45px;
+    padding-top: 10px;
+}
+
+.rs-badge-independent,
+.rs-badge-content {
+    background-color: #FF0800 !important;
+}
+
+.rs-calendar-panel.rs-calendar-compact .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
+    height: 60px !important;
+}
+
 .rs-calendar-panel .rs-calendar-table-cell-day {
-  margin-top: 10px;
+    margin-top: 10px;
 }

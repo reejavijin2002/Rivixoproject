@@ -54,3 +54,9 @@
         left: 10px;
         transform: translate(-50%, -50%);
     }
+    
+    @media (min-width:540px) {
+        .App {
+            display: none;
+        }
+    }

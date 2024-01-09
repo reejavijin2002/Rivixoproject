@@ -8,6 +8,8 @@ import image4 from "../../assets/Images/image4.png";
 import { format, addMonths } from "date-fns";
 import { isSameDay } from "date-fns";
 import img1 from "../../assets/Images/nomeeting.png";
+import Deskcalendar1 from '../Desktopcalendar1/Deskcalendar1'
+
 
 function CountdownTimer({ timeInSeconds, onTimerExpired }) {
   const [time, setTime] = useState(timeInSeconds);
@@ -284,9 +286,24 @@ function Confirmd(props) {
   const getStyles = (currentDay) => {
     return isSameDay(currentDay, selectedDate) ? selectedStyle : null;
   };
+  const selectedStyle1 = {
+    fontWeight: "bold",
+    width: "40px",
+    height: "50px",
+    borderRadius: "8px",
+    color: "white",
+    background:
+      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    fontSize: "12px",
+    
+  };
+  const getStyles1 = (currentDay) => {
+    return isSameDay(currentDay, selectedDate) ? selectedStyle1 : null;
+  };
+  
   const greenDays = [
-    new Date(2024, 0, 4),
-    new Date(2024, 0, 5),
+    new Date(2024, 0, 7),
+    new Date(2024, 0, 9),
     new Date(2024, 0, 12),
     new Date(2023, 11, 19),
     new Date(2023, 11, 21),
@@ -311,7 +328,18 @@ function Confirmd(props) {
         getStyles={getStyles}
         greenDays={greenDays}
       />
-      <div className="border"></div>
+      <div className="border1"></div>
+      <div className="desktopmain"> 
+        <div className="desktopcalendar  mt-[-40px] mr-auto">
+        <Deskcalendar1 
+        onDateClick={onDateClick}
+        greenDays={greenDays} 
+        isRedDay={isRedDay}
+        getStyles1={getStyles1}/>
+          
+        </div>
+        <div className="desktopseconddiv">
+     
 
       {clicked && selectedRedDayData ? (
         selectedRedDayData.map((item) => (
@@ -323,7 +351,7 @@ function Confirmd(props) {
                 </p>
                 <p>{format(selectedDate, "d")}</p>
               </div>
-              <div>
+              <div className="event-info-start">
                 <div className="event-info">
                   <p className="event-time">{item.time}</p>
                   <p className="event-name">{item.name}</p>
@@ -345,8 +373,8 @@ function Confirmd(props) {
                     <img
                       loading="lazy"
                       src={item.members[0].image}
-                      height="40px"
-                      width="40px"
+                      height="50px"
+                      width="50px"
                     />
                     <div className="member-details">
                       <p className="member-name">
@@ -453,6 +481,8 @@ function Confirmd(props) {
           <img src={img1} alt="" />
         </div>
       )}
+      </div>
+       </div>
     </div>
   );
 }

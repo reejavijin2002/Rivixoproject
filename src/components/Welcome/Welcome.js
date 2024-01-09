@@ -14,7 +14,7 @@ const Welcome = () => {
     return (
         <div className='welcome-container'>
             <h3>Hi Esther </h3>
-            <h5>Welcome</h5>
+            <h5 className='text-red-500' >Welcome</h5>
             <p className='meetings'>Check your upcoming meetings <br />and prepare for it</p>
             <div className='menu'>
                 <div>

@@ -13,10 +13,13 @@ import Popup from "reactjs-popup";
 import Overlay from "react-bootstrap/Overlay";
 import img1 from "../../assets/Images/nomeeting.png";
 import Item from "antd/es/list/Item";
+import Calendar from "react-calendar";
+import Deskcalendar from '../Desktopcalendar/Deskcalendar'
 
 function MyComponent(props) {
   const { getSelectedDay } = props;
   const { onRedDayClick } = props;
+  
 
   const { labelFormat } = props;
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -35,6 +38,7 @@ function MyComponent(props) {
   const [showRejectAcceptButtons, setShowRejectAcceptButtons] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [selectedRedDayData, setSelectedRedDayData] = useState(null);
+  console.log(selectedDate,"sulaiman");
 
   const handleClicked = () => {
     setClicked(true);
@@ -240,8 +244,8 @@ function MyComponent(props) {
   };
 
   const redDays = [
-    new Date(2024, 0, 5),
-    new Date(2024, 0, 8),
+    new Date(2024, 0, 7),
+    new Date(2024, 0, 10),
     new Date(2024, 0, 13),
     new Date(2023, 11, 15),
     new Date(2023, 11, 17),
@@ -252,24 +256,40 @@ function MyComponent(props) {
     height: "35px",
     borderRadius: "8px",
     color: "white",
-    background: "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    background:
+      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
     fontSize: "12px",
     fontWeight: "400",
+  };
+  const selectedStyle1 = {
+    fontWeight: "bold",
+    width: "40px",
+    height: "50px",
+    borderRadius: "8px",
+    color: "white",
+    background:
+      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    fontSize: "12px",
+    
   };
 
   const getStyles = (currentDay) => {
     const isSelected = isSameDay(currentDay, selectedDate);
     return isSelected ? selectedStyle : null;
   };
+  const getStyles1 = (currentDay) => {
+    const isSelected = isSameDay(currentDay, selectedDate);
+    return isSelected ? selectedStyle1 : null;
+  };
 
   const isRedDay = (day) => {
     return redDays.some((redDay) => isSameDay(redDay, day));
   };
-  const onDateClick = (day) => {
+   const onDateClick = (day) => {
     setSelectedDate(day);
 
     const isClickedDateRed = isRedDay(day);
-
+       
     if (isClickedDateRed) {
       handleClicked();
       const calenderMap = [
@@ -283,7 +303,7 @@ function MyComponent(props) {
       );
 
       const dynamicData = selectedMapping ? selectedMapping.data : [];
-      setSelectedRedDayData(renderCalendarItems(dynamicData));
+      setSelectedRedDayData(dynamicData);
 
       if (onRedDayClick) {
         onRedDayClick(day);
@@ -299,7 +319,7 @@ function MyComponent(props) {
   const renderCalendarItems = (data, arrayIndex) => {
     return;
   };
-  const allPendingData = [...Pendingdata2, ...Pendingdata3, ...events];
+  
 
   return (
     <div className="pending-component">
@@ -310,7 +330,7 @@ function MyComponent(props) {
           className="header-image"
         />
 
-        <div className="header-info"></div>
+        <div className="header-info bg"></div>
       </div>
       <Calender2
         onSelectDate={(date) => setSelectedDate(date)}
@@ -318,9 +338,19 @@ function MyComponent(props) {
         onDateClick={onDateClick}
         redDays={redDays}
         getStyles={getStyles}
+        
       />
 
-      <div className="border"></div>
+      <div className="border1"></div>
+      <div className="desktopmain">
+        <div className="desktopcalendar mt-[-40px] mr-auto">
+          <Deskcalendar  onDateClick={onDateClick}
+           redDays={redDays}
+           isRedDay={isRedDay}
+           selectedDate={selectedDate}
+           getStyles1={getStyles1}/>
+        </div>
+        <div className="desktopseconddiv">
 
       {clicked && selectedRedDayData ? (
         selectedRedDayData.map((item) => (
@@ -332,7 +362,7 @@ function MyComponent(props) {
                 </p>
                 <p>{format(selectedDate, "d")}</p>
               </div>
-              <div>
+              <div className="event-info-start">
                 <div className="event-info">
                   <p className="event-time">{item.time}</p>
                   <p className="event-name">{item.name}</p>
@@ -353,8 +383,8 @@ function MyComponent(props) {
                     <img
                       loading="lazy"
                       src={item.members[0].image}
-                      height="40px"
-                      width="40px"
+                      height="50px"
+                      width="50px"
                     />
                     <div className="member-details">
                       <p className="member-name">
@@ -476,6 +506,8 @@ function MyComponent(props) {
           <img src={img1} alt="" />
         </div>
       )}
+      </div>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,8 @@ import image2 from "../../assets/Images/creater.png";
 import image3 from "../../assets/Images/image3.png";
 import { isSameDay } from "date-fns";
 import img1 from "../../assets/Images/nomeeting.png";
+import Deskcalendar2 from '../Desktopcalendar2/Deskcalendar2'
+
 
 function Calendarcomponent(props) {
   const { labelFormat } = props;
@@ -70,10 +72,25 @@ function Calendarcomponent(props) {
     fontSize: "12px",
     fontWeight: "400",
   };
+  const selectedStyle1 = {
+    fontWeight: "bold",
+    width: "40px",
+    height: "50px",
+    borderRadius: "8px",
+    color: "white",
+    background:
+      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    fontSize: "12px",
+    
+  };
 
   const getStyles = (currentDay) => {
     const isSelected = isSameDay(currentDay, selectedDate);
     return isSelected ? selectedStyle : null;
+  };
+  const getStyles1 = (currentDay) => {
+    const isSelected = isSameDay(currentDay, selectedDate);
+    return isSelected ? selectedStyle1 : null;
   };
 
   const monthNames = [
@@ -240,6 +257,15 @@ function Calendarcomponent(props) {
         getStyles={getStyles}
       />
       <div className="border1"></div>
+      <div className="desktopmain">
+        <div className="desktopcalendar  mt-[-40px] mr-auto">
+        <Deskcalendar2  onDateClick={onDateClick}
+           redDays={redDays}
+           isRedDay={isRedDay}
+           selectedDate={selectedDate}
+           getStyles1={getStyles1}/>
+        </div>
+        <div className="desktopseconddiv">
 
       {clicked ? (
         selectedRedDayData 
@@ -250,6 +276,8 @@ function Calendarcomponent(props) {
           <img src={img1} alt="" />
         </div>
       )}
+      </div>
+      </div>
     </div>
   );
 }

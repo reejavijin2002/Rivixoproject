@@ -116,7 +116,7 @@ const DateView = ({
             <div className={styles.dayLabel}></div>
             {isRedDay && <div className="redone"></div>}
             {/* {isgreenDay && <div className="greenone"></div>} */}
-            {formattedDay} {/* Show only the first letter of the day */}
+            {formattedDay} 
             <div className={styles.dateLabel}>
               {format(currentDay, dateFormat)}
             </div>
