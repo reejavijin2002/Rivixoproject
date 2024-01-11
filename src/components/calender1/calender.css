@@ -31,7 +31,7 @@
         outline: none;
     }
     
-    @media (min-width:540px) {
+    @media (min-width:541px) {
         .redone::before {
             content: "";
             position: absolute;

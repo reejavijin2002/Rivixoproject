@@ -148,7 +148,11 @@ export default function Example({
                       ""
                     )}
                     <div className="flex flex-col"> 
-                    <div className="calenderletters">
+                    <div className="calenderletters"  style={{
+                          color: isEqual(day, selectedDate)
+                            ? "#ffffff"
+                            : "#B8B8B8",
+                        }}>
                     { format(day, dayFormat).substring(0, 1)}
                     </div>
                     

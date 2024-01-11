@@ -55,7 +55,9 @@ const Login = () => {
                                 <Switch onChange={onChange} className='toggle' />
                             </div>
                             <div className='logForm-mob'>
+                            
                                 <Button name='Login' />
+                
                             </div>
                         </div>
                     </div>

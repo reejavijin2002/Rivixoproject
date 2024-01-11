@@ -1,19 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState,  useEffect } from "react";
 import "./pending.css";
-import ColumnGroup from "antd/es/table/ColumnGroup";
 import image1 from "../../assets/Images/member.png";
 import image2 from "../../assets/Images/creater.png";
 import image3 from "../../assets/Images/image3.png";
 import image4 from "../../assets/Images/image4.png";
 
 import Calender2 from "../calender2/Calender2";
-import { format, addMonths } from "date-fns";
+import { format } from "date-fns";
 import { isSameDay } from "date-fns";
-import Popup from "reactjs-popup";
-import Overlay from "react-bootstrap/Overlay";
 import img1 from "../../assets/Images/nomeeting.png";
-import Item from "antd/es/list/Item";
-import Calendar from "react-calendar";
 import Deskcalendar from '../Desktopcalendar/Deskcalendar'
 
 function MyComponent(props) {
@@ -24,12 +19,12 @@ function MyComponent(props) {
   const { labelFormat } = props;
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [approvalStatus, setApprovalStatus] = useState({});
-  const [showRejectPopup, setShowRejectPopup] = useState(false);
+  // const [showRejectPopup, setShowRejectPopup] = useState(false);
   const [isPopupActive, setIsPopupActive] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   const [rejectReason, setRejectReason] = useState("");
-  const [rejected, setRejected] = useState(false);
+  // const [rejected, setRejected] = useState(false);
   const [isSaveClicked, setIsSaveClicked] = useState(false);
   const [isCancelClicked, setIsCancelClicked] = useState(false);
   const [isSaveButtonClicked, setIsSaveButtonClicked] = useState(false);
@@ -38,7 +33,7 @@ function MyComponent(props) {
   const [showRejectAcceptButtons, setShowRejectAcceptButtons] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [selectedRedDayData, setSelectedRedDayData] = useState(null);
-  console.log(selectedDate,"sulaiman");
+  
 
   const handleClicked = () => {
     setClicked(true);
@@ -166,9 +161,7 @@ function MyComponent(props) {
     }
   }, [selectedDate]);
 
-  const rejectHandler = () => {
-    setRejected(true);
-  };
+ 
   const [showRejectPopups, setShowRejectPopups] = useState(
     Array(events.length).fill(false)
   );
@@ -316,9 +309,11 @@ function MyComponent(props) {
       getSelectedDay(day);
     }
   };
-  const renderCalendarItems = (data, arrayIndex) => {
-    return;
-  };
+  // const renderCalendarItems = (data, arrayIndex) => {
+  //   return;
+  // };
+
+
   
 
   return (

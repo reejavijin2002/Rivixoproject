@@ -116,7 +116,7 @@
     font-size: 12px;
 }
 
-@media (min-width:540px) {
+@media (min-width:541px) {
     .confirmd-main {
         padding: 20px;
     }

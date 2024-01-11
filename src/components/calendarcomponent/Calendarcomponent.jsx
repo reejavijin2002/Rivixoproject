@@ -119,6 +119,26 @@ function Calendarcomponent(props) {
       memberRole: "Technical",
       meetingStatus: "Meeting started",
     },
+    {
+      startTime: "9:00 pm",
+      endTime: "11:00 pm",
+      title: "( title )",
+      clientName: "Client name",
+      memberImage: image3,
+      memberName: "Jane Cooper",
+      memberRole: "Technical",
+      meetingStatus: "Meeting starts in 3 hrs 20 min",
+    },
+    {
+      startTime: "4:00 pm",
+      endTime: "6:00 pm",
+      title: "( title )",
+      clientName: "Client name",
+      memberImage: image2,
+      memberName: "Early Cooper",
+      memberRole: "Technical",
+      meetingStatus: "Meeting ended",
+    },
   ];
 
   const calendarData1 = [
@@ -132,6 +152,26 @@ function Calendarcomponent(props) {
       memberRole: "Technical",
       meetingStatus: "Meeting starts in 3 hrs 20 min",
     },
+    {
+      startTime: "3:00 pm",
+      endTime: "5:00 pm",
+      title: "( title )",
+      clientName: "Client name",
+      memberImage: image1,
+      memberName: "Jane Cooper",
+      memberRole: "Technical",
+      meetingStatus: "Meeting started",
+    },
+    {
+      startTime: "4:00 pm",
+      endTime: "6:00 pm",
+      title: "( title )",
+      clientName: "Client name",
+      memberImage: image2,
+      memberName: "Early Cooper",
+      memberRole: "Technical",
+      meetingStatus: "Meeting ended",
+    },
   ];
 
   const calendarData2 = [
@@ -144,6 +184,26 @@ function Calendarcomponent(props) {
       memberName: "Early Cooper",
       memberRole: "Technical",
       meetingStatus: "Meeting ended",
+    },
+    {
+      startTime: "3:00 pm",
+      endTime: "5:00 pm",
+      title: "( title )",
+      clientName: "Client name",
+      memberImage: image1,
+      memberName: "Jane Cooper",
+      memberRole: "Technical",
+      meetingStatus: "Meeting started",
+    },
+    {
+      startTime: "9:00 pm",
+      endTime: "11:00 pm",
+      title: "( title )",
+      clientName: "Client name",
+      memberImage: image3,
+      memberName: "Jane Cooper",
+      memberRole: "Technical",
+      meetingStatus: "Meeting starts in 3 hrs 20 min",
     },
   ];
 

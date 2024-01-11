@@ -140,7 +140,7 @@
         align-self: stretch;
     }
     
-    @media (min-width:540px) {
+    @media (min-width:541px) {
         .Calendarcomponent-main {
             padding: 20px;
         }

@@ -91,7 +91,7 @@ const MemberDetails = () => {
                     ]}
                 />
             </div>
-            <div className='add-member' onClick={addMemberHandler}><IoMdAdd size={25} />&nbsp;&nbsp;Add Members</div>
+            <div className='add-member' onClick={addMemberHandler}><IoMdAdd size={25} />&nbsp;&nbsp;<p>Add Members</p></div>
             <div className='d-flex justify-content-center'>
             <p className='lead-select-label'>Select a Lead before creating meeting</p>
             </div>

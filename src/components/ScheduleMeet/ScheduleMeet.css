@@ -96,13 +96,17 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 0px;
     /* 142.857% */
     letter-spacing: 0.3px;
     border-radius: 6px;
     border: 1px solid #4A78A1;
     background: #FFF;
     margin-top: 20px;
+}
+
+.add-member p {
+    margin-top: -10px;
 }
 
 .create-btn {

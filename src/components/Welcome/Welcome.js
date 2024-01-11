@@ -33,11 +33,15 @@ const Welcome = () => {
             </div>
             <div className='menu'>
                 <div>
+                    <Link to='/Confirmd'>
                     <img src={Calender} alt='schedule' />
+                    </Link>
                     <p>Confirmed</p>
                 </div>
                 <div className='calender'>
+                    <Link to='/Calendarcomponent'>
                     <img src={Confirmed} alt='pending' />
+                    </Link>
                     <p>Calendar</p>
                 </div>
             </div>
