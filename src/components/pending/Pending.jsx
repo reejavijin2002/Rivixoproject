@@ -78,7 +78,7 @@ function MyComponent(props) {
     {
       id: 3,
       time: "9:00 PM - 11:00 aM",
-      name: "vimal McKinney",
+      name: "jaob McKinney",
       location: "ALFALAH",
       link: "https://maps.app.goo.gl/BVK2q8JVqNWwhwd7A",
       title: "Title here",
@@ -92,7 +92,7 @@ function MyComponent(props) {
     {
       id: 4,
       time: "9:00 PM - 11:00 aM",
-      name: "vimal McKinney",
+      name: "jacob McKinney",
       location: "ALFALAH",
       link: "https://maps.app.goo.gl/BVK2q8JVqNWwhwd7A",
       title: "Title here",
@@ -249,8 +249,7 @@ function MyComponent(props) {
     height: "40px",
     borderRadius: "8px",
     color: "white",
-    background:
-      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    background:"var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
     fontSize: "12px",
     fontWeight: "400",
   };
@@ -260,8 +259,7 @@ function MyComponent(props) {
     height: "50px",
     borderRadius: "8px",
     color: "white",
-    background:
-      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    background:"var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
     fontSize: "12px",
     
   };

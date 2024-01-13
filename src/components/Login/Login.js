@@ -54,11 +54,15 @@ const Login = () => {
                                 <p>Remember me&nbsp;&nbsp;</p>
                                 <Switch onChange={onChange} className='toggle' />
                             </div>
+                            <Link to='welcome'>
                             <div className='logForm-mob'>
+                               
                             
                                 <Button name='Login' />
+                               
                 
                             </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

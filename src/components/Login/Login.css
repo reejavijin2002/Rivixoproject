@@ -29,7 +29,7 @@
     background-image: url(../../assets/Images/login.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 600px;
+    min-height: 100%;
     background-position: fixed;
 }
 

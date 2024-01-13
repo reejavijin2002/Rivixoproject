@@ -1,4 +1,4 @@
-import { Menu, Transition } from "@headlessui/react";
+
 // import { DotsVerticalIcon } from '@heroicons/react/outline'
 // import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import {
@@ -15,9 +15,9 @@ import {
   parseISO,
   startOfToday,
 } from "date-fns";
-import { Fragment, useState } from "react";
+import {  useState } from "react";
 
-import { FaAnchor } from "react-icons/fa";
+// import { FaAnchor } from "react-icons/fa";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
 import "./desktop.css";
@@ -69,7 +69,7 @@ export default function Example({
                 <button
                   type="button"
                   onClick={previousMonth}
-                  className=" flex flex-none pr-5 items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
+                  className="flex flex-none pr-5 items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
                 >
                   <span className="sr-only">Previous month</span>
                   <SlArrowLeft />

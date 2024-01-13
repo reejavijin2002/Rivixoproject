@@ -106,7 +106,7 @@ function Confirmd(props) {
     {
       id:2,
       time: "9:00 PM - 11:00 aM",
-      name: "vimal McKinney",
+      name: "suresh McKinney",
       location: "ALFALAH",
       link: "https://maps.app.goo.gl/BVK2q8JVqNWwhwd7A",
       title: "Title here",
@@ -144,7 +144,7 @@ function Confirmd(props) {
     {
       id:4,
       time: "9:00 PM - 11:00 aM",
-      name: "vimal McKinney",
+      name: "suresh McKinney",
       location: "ALFALAH",
       link: "https://maps.app.goo.gl/BVK2q8JVqNWwhwd7A",
       title: "Title here",
@@ -182,7 +182,7 @@ function Confirmd(props) {
     {
       id:6,
       time: "9:00 PM - 11:00 aM",
-      name: "vimal McKinney",
+      name: "suresh McKinney",
       location: "ALFALAH",
       link: "https://maps.app.goo.gl/BVK2q8JVqNWwhwd7A",
       title: "Title here",

@@ -1,0 +1,20 @@
+{
+    "name": "Rivixo",
+    "short_name": "Rivixo",
+    "start_url": ".",
+    "baground_color": "blue",
+    "theme_color": "#4A78A1",
+    "display": "standalone",
+    "icons": [{
+            "src": "images1/letter-m.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "images1/letter-m (1).png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
+}
