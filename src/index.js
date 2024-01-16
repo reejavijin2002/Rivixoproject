@@ -29,8 +29,6 @@ root.render(
               <Route exact path='/Confirmd' element={<Confirmd/>}></Route>
               <Route exact path='/Calendarcomponent' element={<Calendarcomponent/>}></Route>
               <Route exact path='/Calendarcomponent' element={<Calendarcomponent/>}></Route>
-
-              {/* <Route exact path='/Nomeeting' element={<Nomeeting/>}></Route> */}
               <Route exact path='/Calender1' element={<Calender1/>}></Route>
           </Routes>
       </BrowserRouter>

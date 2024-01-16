@@ -25,14 +25,11 @@ function Calendarcomponent(props) {
 
   const handleClicked1 = () => {
     setClicked(false);
-    setSelectedRedDayData(null); // Reset the selected red day's data
+    setSelectedRedDayData(null); 
   };
   let day=[];
   useEffect(() => {
-    // Check if the current date is a red day
     const isCurrentDateRed = isRedDay(selectedDate);
-
-    // Set the clicked state based on the condition
     setClicked(isCurrentDateRed);
 
     if (getSelectedDay) {

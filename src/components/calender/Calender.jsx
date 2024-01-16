@@ -64,7 +64,7 @@ function App({ onSelectDate, labelFormat,SelectedDay,onRedDayClick ,onDateClick,
         redDays={redDays}
         
 
-        // Pass reddote state to the DatePicker component
+      
       />
 
       <DateView

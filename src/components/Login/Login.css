@@ -1,7 +1,7 @@
 .Login {
     background: linear-gradient(180deg, #4A78A1 0%, #56B9CF 33.85%, #57BDD3 99.54%);
     width: 100%;
-    height: 80vh;
+    height: screen;
 }
 
 .Login h3 {

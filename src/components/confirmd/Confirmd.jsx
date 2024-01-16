@@ -369,7 +369,7 @@ function Confirmd(props) {
                 <div className="event-title text-base">{item.title}</div>
                 <div className="event-members">
                   <div className="member-info">
-                    {/* Display team leader's name and role */}
+              
                     <img
                       loading="lazy"
                       src={item.members[0].image}
@@ -422,7 +422,7 @@ function Confirmd(props) {
                           />
                         </svg>
                         <CountdownTimer
-                          timeInSeconds={item.countdownTime} // Replace with the actual countdown time for each event
+                          timeInSeconds={item.countdownTime} 
                           onTimerExpired={() =>
                             console.log(`Time to leave for ${item.name}`)
                           }

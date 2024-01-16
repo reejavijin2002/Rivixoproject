@@ -14,7 +14,7 @@ function App({ onSelectDate, labelFormat,onDateClick,getStyles,redDays }) {
     { date: new Date(2023, 0, 5), text: "Event 1", marked: true },
     { date: new Date(2023, 0, 15), text: "Event 2", marked: true },
     { date: new Date(2023, 1, 10), text: "Event 3", marked: true },
-    // Add more dummy dates as needed
+    
   ];
 
   const furedDote = () => {
@@ -36,7 +36,7 @@ function App({ onSelectDate, labelFormat,onDateClick,getStyles,redDays }) {
         reddote={reddote}
         onDateClick={onDateClick}
         getStyles={getStyles}
-        redDays={redDays} // Pass reddote state to the DatePicker component
+        redDays={redDays} 
       />
     </div>
   );
