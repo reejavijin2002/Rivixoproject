@@ -9,6 +9,7 @@ import { format, addMonths } from "date-fns";
 import { isSameDay } from "date-fns";
 import img1 from "../../assets/Images/nomeeting.png";
 import Deskcalendar1 from '../Desktopcalendar1/Deskcalendar1'
+import { useNavigate } from "react-router-dom";
 
 
 function CountdownTimer({ timeInSeconds, onTimerExpired }) {
@@ -312,6 +313,7 @@ function Confirmd(props) {
   // const renderCalendarItems = (data) => {
   //   return
   // }
+  const navigate=useNavigate()
   return (
     <div className="confirmd-main">
       <div className="header1">
@@ -319,7 +321,8 @@ function Confirmd(props) {
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/f156499a2cad223800b453ff5712eda63b8b6b2c2676f1ecf9a7e04a4c0dba84?"
           className="header-image"
-        />
+        
+        ></img>
 
         <div className="header-info"></div>
       </div>

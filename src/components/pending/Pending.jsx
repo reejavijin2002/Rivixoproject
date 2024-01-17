@@ -10,6 +10,8 @@ import { format } from "date-fns";
 import { isSameDay } from "date-fns";
 import img1 from "../../assets/Images/nomeeting.png";
 import Deskcalendar from '../Desktopcalendar/Deskcalendar'
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 function MyComponent(props) {
   const { getSelectedDay } = props;
@@ -33,6 +35,7 @@ function MyComponent(props) {
   const [showRejectAcceptButtons, setShowRejectAcceptButtons] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [selectedRedDayData, setSelectedRedDayData] = useState(null);
+
   
 
   const handleClicked = () => {
@@ -310,18 +313,17 @@ function MyComponent(props) {
   // const renderCalendarItems = (data, arrayIndex) => {
   //   return;
   // };
+  const navigate=useNavigate()
 
 
-  
 
   return (
     <div className="pending-component">
       <div className="header1">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/f156499a2cad223800b453ff5712eda63b8b6b2c2676f1ecf9a7e04a4c0dba84?"
-          className="header-image"
-        />
+      
+        <FaArrowLeft className="header-image"  onClick={() => navigate('/welcome')} />
+        {/* <FaArrowLeft className='prev-arrow' onClick={() => navigate('/welcome')} /> */}
+
 
         <div className="header-info bg"></div>
       </div>

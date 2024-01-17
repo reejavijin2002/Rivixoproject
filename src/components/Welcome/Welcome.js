@@ -5,11 +5,12 @@ import Pending from '../../assets/Images/pending.svg'
 import Calender from '../../assets/Images/calender.svg'
 import Confirmed from '../../assets/Images/confirmed.svg'
 import { FiLogOut } from "react-icons/fi";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Calendar, Badge } from 'rsuite';
 
 
 const Welcome = () => {
+    const navigate=useNavigate()
   
     return (
         <div className='welcome-container'>
@@ -18,30 +19,31 @@ const Welcome = () => {
             <p className='meetings'>Check your upcoming meetings <br />and prepare for it</p>
             <div className='menu'>
                 <div>
-                    <Link to='/ClientDetails'>
-                        <img src={Meeting} alt='schedule' />
-                    </Link>
+                
+
+                        <img src={Meeting} alt='schedule' onClick={() => navigate('/ClientDetails')} />
+        
                     <p>Schedule</p>
                 </div>
 
                 <div className='pending'>
-                    <Link to='/Pending'>
-                        <img src={Pending} alt='pending' />
-                    </Link>
+                
+                        <img src={Pending} alt='pending'  onClick={() => navigate('/Pending')} />
+                    
                     <p>Pending</p>
                 </div>
             </div>
             <div className='menu'>
                 <div>
-                    <Link to='/Confirmd'>
-                    <img src={Calender} alt='schedule' />
-                    </Link>
+                
+                    <img src={Calender} alt='schedule'  onClick={() => navigate('/Confirmd')} />
+            
                     <p>Confirmed</p>
                 </div>
                 <div className='calender'>
-                    <Link to='/Calendarcomponent'>
-                    <img src={Confirmed} alt='pending' />
-                    </Link>
+        
+                    <img src={Confirmed} alt='pending'  onClick={() => navigate('/Calendarcomponent')} />
+        
                     <p>Calendar</p>
                 </div>
             </div>

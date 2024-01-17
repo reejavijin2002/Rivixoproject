@@ -3,6 +3,7 @@ import './ScheduleMeet.css'
 import { FaArrowLeft } from "react-icons/fa6";
 import { DatePicker, TimePicker, Select } from 'antd';
 import { FaLocationDot } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 const ClientDetails = () => {
     const onChange = (date, dateString) => {
         console.log(date, dateString);
@@ -10,11 +11,12 @@ const ClientDetails = () => {
     const handleChange = (value) => {
         console.log(`selected ${value}`);
     };
+    const navigate=useNavigate()
     return (
         <div className='container client-detail-pad'>
             <div className='row'>
                 <div className='col-md-6'>
-                    <FaArrowLeft className='prev-arrow' />
+                    <FaArrowLeft className='prev-arrow' onClick={() => navigate('/welcome')} />
                     <h3>Client details</h3>
                     <form className='meeting-form'>
                         <label>Client Name:</label><br />
