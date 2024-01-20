@@ -314,6 +314,9 @@ function MyComponent(props) {
   //   return;
   // };
   const navigate=useNavigate()
+  const navigatefunction=()=>{
+    navigate('/welcome')
+  }
 
 
 
@@ -321,7 +324,9 @@ function MyComponent(props) {
     <div className="pending-component">
       <div className="header1">
       
-        <FaArrowLeft className="header-image"  onClick={() => navigate('/welcome')} />
+      
+        <FaArrowLeft onClick={navigatefunction} className="header-image"></FaArrowLeft>
+      
         {/* <FaArrowLeft className='prev-arrow' onClick={() => navigate('/welcome')} /> */}
 
 

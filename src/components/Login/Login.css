@@ -119,7 +119,7 @@
 
 .toggle {
     margin-top: 14px;
-    background-color: #e5e5e5 !important;
+    background-color: #e5e5e5;
 }
 
 .logForm-mob p {
@@ -141,6 +141,7 @@
 
 .validate {
     color: red;
+    font-weight: 600;
 }
 
 @media only screen and (min-width: 790px) {

@@ -14,15 +14,17 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const usernameHandler =(e)=>{
-    setUsername(e.target.value);
-    console.log(e.target.value);
-      }
 
-      const passwordHandler=(e)=>{
-        setPassword(e.target.value)
-        console.log(e.target.value)
-      }
+
+  const usernameHandler = (e) => {
+    setUsername(e.target.value);
+
+  };
+
+  const passwordHandler = (e) => {
+    setPassword(e.target.value);
+    
+  };
   const visibilityHandler = (mode) => {
     setShow(mode);
   };
@@ -30,32 +32,33 @@ const Login = () => {
     console.log(`switch to ${checked}`);
   };
 
-
-
   const navigate = useNavigate();
+
   const validateForm = (values) => {
     const errors = {};
     if (!username) {
-        errors.Username = "Username is required";
+      errors.Username = "Username is required";
     }
     if (!password) {
-        errors.Password = "Password is required";
+      errors.Password = "Password is required";
     }
     return errors;
   };
 
-  const onsubmitHandler = (values) => {
+  const onsubmitHandler = (e) => {
+    
+    
     const dammyUsername = "vijay";
-    const dammyPassword = "vijay@24"
-    console.log("form values",values);
-    if(
-      username === dammyUsername && 
-      password===dammyPassword
-      ){
+    const dammyPassword = "vijay@24";
+    console.log("username",username);
+    console.log("password",password);
+
+
+    if (username === dammyUsername && password === dammyPassword) {
       navigate("/welcome");
     }
   };
-  
+
   return (
     <React.Fragment>
       <div className="container-fluid nopad mobile-view">
@@ -73,18 +76,14 @@ const Login = () => {
               
             >
               {(formik) => (
-                <Form className="logForm">
+                <Form className="logForm" onSubmit={formik.handleSubmit}>
                   <Field
                     name="Username"
-                    className={
-                      username
-                        ? "input is-invalid"
-                        : "input"
-                    }
-                    placeholder="Username" 
-                    id="username" 
+                    className={username ? "input is-invalid" : "input"}
+                    placeholder="Username"
+                    id="username"
                     value={username}
-                    onChange={usernameHandler}   
+                    onChange={usernameHandler}
                   />
                   {!username ? (
                     <div className="validate">{formik.errors.Username}</div>
@@ -94,11 +93,7 @@ const Login = () => {
                     <Field
                       type={show ? "password" : "text"}
                       name="Password"
-                      className={
-                        password
-                          ? "inputpsw is-invalid"
-                          : "inputpsw"
-                      }
+                      className={password ? "inputpsw is-invalid" : "inputpsw"}
                       placeholder="Enter Password"
                       id="password"
                       value={password}
@@ -117,7 +112,7 @@ const Login = () => {
                       />
                     )}
                   </div>
-                  {!password ? (
+                  {!password  ? (
                     <div className="validate">{formik.errors.Password}</div>
                   ) : null}
                   <div className="remember">
@@ -125,8 +120,7 @@ const Login = () => {
                     <Switch onChange={onChange} className="toggle" />
                   </div>
 
-                  <div onClick={() => onsubmitHandler()}>
-                    
+                  <div onClick={(e) => formik.handleSubmit(username && password ?onsubmitHandler():null)}>
                     <Button name="Login" />
                   </div>
                 </Form>
@@ -142,75 +136,73 @@ const Login = () => {
             <p>Enter your username and password</p>
           </div>
           <div className="col-md-8 login-right-curve">
-          <Formik 
-            initialValues={{
-              Username: "",
-              Password: "",
-            }}
-            validate={validateForm}
-            onSubmit={onsubmitHandler}>
-          {(formik) => (
-            <Form>
-             
-              <div className="logForm-mob">
-                <Field
-                  
-              
-                  name="Username"
-                  className={
-                  !username
-                      ? "input-mob is-invalid"
-                      : "input-mob"
-                  }
-                  placeholder="Username"
-                  id="username" 
-                  onChange={usernameHandler}  
-                  value={username}
-                />
-                
-              </div>
-              {!username ? (
+            <Formik
+              initialValues={{
+                Username: "",
+                Password: "",
+              }}
+              validate={validateForm}
+              onSubmit={onsubmitHandler}
+            >
+              {(formik) => (
+                <Form onSubmit={formik.handleSubmit}>
+                  <div className="logForm-mob">
+                    <Field
+                      name="Username"
+                      className={
+                        !username ? "input-mob is-invalid" : "input-mob"
+                      }
+                      placeholder="Username"
+                      id="username"
+                      onChange={usernameHandler}
+                      value={username}
+                    />
+                  </div>
+                  {!username  ? (
                     <div className="validate1">{formik.errors.Username}</div>
                   ) : null}
-              <div className="logForm-mob-pswd">
-                <Field
-                  type={show ? "password" : "text"}
-                  placeholder="Enter password"
-                  name="Password"
-                  className={
-                    !password
-                      ? "input-mob-pswd is-invalid"
-                      : "input-mob-pswd"
-                  }
-                  id="password"
-                  onChange={passwordHandler}
-                  value={password}
-                />
-                {show ? (
-                  <FaEyeSlash
-                    className="pswd-visblty"
-                    onClick={() => visibilityHandler(false)}
-                  />
-                ) : (
-                  <FaEye
-                    className="pswd-visblty"
-                    onClick={() => visibilityHandler(true)}
-                  />
-                )}
-              </div>
-              {!password ? (
+                  <div className="logForm-mob-pswd">
+                    <Field
+                      type={show ? "password" : "text"}
+                      placeholder="Enter password"
+                      name="Password"
+                      className={
+                        !password
+                          ? "input-mob-pswd is-invalid"
+                          : "input-mob-pswd"
+                      }
+                      id="password"
+                      onChange={passwordHandler}
+                      value={password}
+                    />
+                    {show ? (
+                      <FaEyeSlash
+                        className="pswd-visblty"
+                        onClick={() => visibilityHandler(false)}
+                      />
+                    ) : (
+                      <FaEye
+                        className="pswd-visblty"
+                        onClick={() => visibilityHandler(true)}
+                      />
+                    )}
+                  </div>
+                  {!password  ? (
                     <div className="validate1">{formik.errors.Password}</div>
                   ) : null}
-              <div className="remember">
-                <p>Remember me&nbsp;&nbsp;</p>
-                <Switch onChange={onChange} className="toggle" />
-              </div>
+                  <div className="remember">
+                    <p>Remember me&nbsp;&nbsp;</p>
+                    <Switch onChange={onChange} className="toggle" />
+                  </div>
 
-              <div className="logForm-mob" onClick={() => onsubmitHandler()}>
-                <Button name="Login" />
-              </div>
-            </Form>
-            )}
+                  <div
+                    className="logForm-mob"
+                    onClick={(e) => formik.handleSubmit(username && password ?onsubmitHandler():null)}
+                  >
+                    <Button name="Login" />
+                  </div>
+                </Form>
+              )}
             </Formik>
           </div>
         </div>
