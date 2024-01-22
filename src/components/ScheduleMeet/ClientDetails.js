@@ -111,22 +111,7 @@ const ClientDetails = () => {
     }
     return errors;
   };
-  const statemangaingforSubmit = () => {
-    if (
-      clientname &&
-      companyname &&
-      email &&
-      number &&
-      reffered &&
-      title &&
-      date &&
-      start &&
-      end &&
-      traveltime &&
-      location
-    ) {
-    }
-  };
+ 
   const submitFunction = () => {
     const formData={
         "clientname":clientname,
@@ -144,7 +129,6 @@ const ClientDetails = () => {
     }
     console.log(formData,"rocky");
     navigate("/MemberDetails");
-    //  statemangaingforSubmit();
   };
   return (
     <div className="container client-detail-pad">
@@ -198,7 +182,7 @@ const ClientDetails = () => {
                 <label>Mobile No:</label>
                 <br />
                 <Field
-                  type="number"
+                  type="phone"
                   className="meeting-input"
                   value={number}
                   onChange={numberhandler}

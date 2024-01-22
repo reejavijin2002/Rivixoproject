@@ -14,8 +14,7 @@ import { DateView } from './DateView';
 import { MonthView } from './MonthView';
 
 function App({ onSelectDate, labelFormat,SelectedDay,onRedDayClick ,onDateClick,getStyles,redDays}) {
-  console.log("12ghs",onDateClick);
-  console.log("style",getStyles);
+
  
 
   const [reddote, setReddote] = useState([]);
@@ -35,16 +34,7 @@ function App({ onSelectDate, labelFormat,SelectedDay,onRedDayClick ,onDateClick,
   };
  
 
-  const dummyMarkedDates = [
-    { date: new Date(2023, 0, 5), text: "Event 1", marked: true },
-    { date: new Date(2023, 0, 15), text: "Event 2", marked: true },
-    { date: new Date(2023, 1, 10), text: "Event 3", marked: true },
-  
-  ];
-
-  const furedDote = () => {
-    setReddote(dummyMarkedDates);
-  };
+ 
 
   return (
     <div className="App">
@@ -57,7 +47,7 @@ function App({ onSelectDate, labelFormat,SelectedDay,onRedDayClick ,onDateClick,
         SelectedDay={selectedDay}
         labelFormat={labelFormat}
         color={"#374e8c"}
-        marked={dummyMarkedDates}
+       
         reddote={reddote}
         onDateClick={onDateClick}
         getStyles={getStyles}
@@ -79,7 +69,7 @@ function App({ onSelectDate, labelFormat,SelectedDay,onRedDayClick ,onDateClick,
       
        labelFormat={labelFormat}
        color={"#374e8c"}
-       marked={dummyMarkedDates}
+      
        reddote={reddote}
        getStyles={getStyles}
        redDays={redDays}

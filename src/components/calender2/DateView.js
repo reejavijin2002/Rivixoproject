@@ -25,22 +25,11 @@ const DateView = ({
 }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const firstSection = { marginLeft: "40px" };
-  const selectedStyle = {
-    fontWeight: "bold",
-    width: "35px",
-    height: "35px",
-    borderRadius: "8px",
-    color: "white",
-    backgroundColor: "red",
-    fontSize:"12px",
-    fontWeight:"400"
-  };
+
   const labelColor = { color: primaryColor };
   const markedStyle = { color: "#8c3737", padding: "2px", fontSize: 12 };
 
-  // const getStyles = (currentDay) => {
-  //   return isSameDay(currentDay, selectedDate) ? selectedStyle : null;
-  // };
+ 
 
   const getId = (currentDay) => {
     return isSameDay(currentDay, selectedDate) ? "selected" : "";
@@ -69,12 +58,7 @@ const DateView = ({
   const renderDays = () => {
   
     const greenDays = [
-      // new Date(2024, 0, 1),
-      // new Date(2024, 0, 16),
-      // new Date(2023, 11, 28),
-      // new Date(2023, 11, 19),
-      // new Date(2023, 11, 21),
-      // Add more dates as needed
+    
     ];
     const dayFormat = "E";
     const dateFormat = "d";
@@ -97,10 +81,7 @@ const DateView = ({
         const isMarkedDay =
           marked && marked.some((item) => isSameDay(item.date, currentDay));
         const isRedDay = redDays.some((redDay) => isSameDay(redDay, currentDay));
-        // const isgreenDay = greenDays.some((greenDay) => isSameDay(greenDay, currentDay));
 
-
-        // Format the day and extract the first letter
         const formattedDay = format(currentDay, dayFormat).substring(0, 1);
 
         days.push(
@@ -115,7 +96,6 @@ const DateView = ({
           >
             <div className={styles.dayLabel}></div>
             {isRedDay && <div className="redone"></div>}
-            {/* {isgreenDay && <div className="greenone"></div>} */}
             {formattedDay} 
             <div className={styles.dateLabel}>
               {format(currentDay, dateFormat)}

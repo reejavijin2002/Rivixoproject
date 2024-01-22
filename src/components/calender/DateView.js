@@ -27,54 +27,22 @@ const DateView = ({
   onRedDayClick,
   
 }) => {
-  console.log("red",redDays);
+  
  
   const [selectedDate, setSelectedDate] = useState(new Date());
   const isRedDay = (day) => {
     return redDays.some((redDay) => isSameDay(redDay, day));
   };
-  // const onDateClick = (day) => {
-  //   setSelectedDate(day);
-
-  //   const isClickedDateRed = isRedDay(day);
-
-  //   if (isClickedDateRed) {
-  //     console.log("Specific task for red days executed!");
-  //     // Pass the red day information to the parent component
-  //     if (onRedDayClick) {
-  //       onRedDayClick(day);
-  //     }
-  //   }
-
-  //   if (getSelectedDay) {
-  //     getSelectedDay(day);
-  //   }
-  // };
+ 
  
   const firstSection = { marginLeft: "40px" };
-  // const selectedStyle = {
-  //   fontWeight: "bold",
-  //   width: "35px",
-  //   height: "35px",
-  //   borderRadius: "8px",
-  //   color: "white",
-  //   backgroundColor: "red",
-  //   fontSize: "12px",
-  //   fontWeight: "400",
-  // };
+ 
   
 
   const labelColor = { color: primaryColor };
   const markedStyle = { color: "#8c3737", padding: "2px", fontSize: 12 };
 
-  // const getStyles = (currentDay) => {
-  //   const isSelected = isSameDay(currentDay, selectedDate);
-  //   console.log("Selected Date:", selectedDate);
-  //   console.log("Current Date:", currentDay);
-  //   console.log("Is Selected:", isSelected);
-  
-  //   return isSelected ? selectedStyle : null;
-  // };
+ 
   
 
   const getId = (currentDay) => {
@@ -102,20 +70,9 @@ const DateView = ({
   };
 
   const renderDays = () => {
-    // const redDays = [
-    //   new Date(2024, 0, 25),
-    //   new Date(2024, 0, 19),
-    //   new Date(2023, 11, 21),
-    //   new Date(2023, 11, 19),
-    //   new Date(2023, 11, 25),
-    
-    // ];
+  
     const greenDays = [
-      // new Date(2024, 0, 1),
-      // new Date(2024, 0, 16),
-      // new Date(2023, 11, 28),
-      // new Date(2023, 11, 19),
-      // new Date(2023, 11, 21),
+    
     
     ];
     const dayFormat = "E";

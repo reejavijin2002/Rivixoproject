@@ -28,7 +28,7 @@ const MemberDetails = () => {
         <div className='member-detail-wrapper'>
             <Modal show={show} onHide={handleClose} centered className='firstdiv' >
               
-                <Modal.Body dialogClassName='member-list'>
+                <Modal.Body dialogClassName='member-list98'>
                     <div className='member-detail padd-20'>
                         <img src={Member} alt='member'/>
                         <div className='details'>
@@ -44,7 +44,7 @@ const MemberDetails = () => {
                             <h3 style={{marginLeft:'0px',marginBottom:'0px',marginTop:'10px'}}>Guy Hawkins</h3>
                             <p style={{marginLeft:'-30px'}}>Technical</p>
                         </div>
-                       <div className='status-unavlble'> <GoDotFill size={25}/>unavailable<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:00 - 5:00
+                       <div className='status-unavlble'> <GoDotFill size={25}/>unavailable<br/>3:00 - 5:00
                       </div>
                        <MdOutlineAddBox size={35} color='#8D8D8D' className='add-action'/>
                     </div>
@@ -111,7 +111,7 @@ const MemberDetails = () => {
                           <h3 style={{marginLeft:'0px',marginBottom:'0px',marginTop:'10px'}}>Guy Hawkins</h3>
                           <p style={{marginLeft:'-30px'}}>Technical</p>
                       </div>
-                     <div className='status'> <GoDotFill size={25}/>available</div>
+                     <div className='status'> <div><GoDotFill size={25}/></div>available</div>
                      <FaRegSquareMinus size={35} color='#8D8D8D' className='add-action'/>
                   </div>
                   <div className='member-detail padd-20'>
@@ -120,7 +120,7 @@ const MemberDetails = () => {
                           <h3 style={{marginLeft:'0px',marginBottom:'0px',marginTop:'10px'}}>Guy Hawkins</h3>
                           <p style={{marginLeft:'-30px'}}>Technical</p>
                       </div>
-                     <div className='status-unavlble'> <GoDotFill size={25}/>unavailable<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:00 - 5:00
+                     <div className='status-unavlble'> <GoDotFill size={25}/>unavailable<br/>3:00 - 5:00
                     </div>
                      <MdOutlineAddBox size={35} color='#8D8D8D' className='add-action'/>
                   </div>

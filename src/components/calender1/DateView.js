@@ -25,16 +25,7 @@ const DateView = ({
 }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const firstSection = { marginLeft: "40px" };
-  const selectedStyle = {
-    fontWeight: "bold",
-    width: "35px",
-    height: "35px",
-    borderRadius: "8px",
-    color: "white",
-    backgroundColor: "red",
-    fontSize:"12px",
-    fontWeight:"400"
-  };
+
   const labelColor = { color: primaryColor };
   const markedStyle = { color: "#8c3737", padding: "2px", fontSize: 12 };
 
@@ -66,12 +57,7 @@ const DateView = ({
 
   const renderDays = () => {
     const redDays = [
-      // new Date(2024, 0, 5),
-      // new Date(2024, 0, 15),
-      // new Date(2023, 11, 13),
-      // new Date(2023, 11, 15),
-      // new Date(2023, 11, 17),
-      // Add more dates as needed
+    
     ];
   
     const dayFormat = "E";

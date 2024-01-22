@@ -8,9 +8,8 @@ import image4 from "../../assets/Images/image4.png";
 import { format, addMonths } from "date-fns";
 import { isSameDay } from "date-fns";
 import img1 from "../../assets/Images/nomeeting.png";
-import Deskcalendar1 from '../Desktopcalendar1/Deskcalendar1'
+import Deskcalendar1 from "../Desktopcalendar1/Deskcalendar1";
 import { useNavigate } from "react-router-dom";
-
 
 function CountdownTimer({ timeInSeconds, onTimerExpired }) {
   const [time, setTime] = useState(timeInSeconds);
@@ -63,13 +62,10 @@ function Confirmd(props) {
 
   const handleClicked1 = () => {
     setClicked(false);
-    setSelectedRedDayData(null); 
+    setSelectedRedDayData(null);
   };
 
-  // const handleMarkAsEnded = () => {
-  //   setMeetingEnded(true);
-  //   // Add any additional logic you need when the "Mark as ended" button is clicked
-  // };
+ 
   const monthNames = [
     "January",
     "February",
@@ -87,7 +83,7 @@ function Confirmd(props) {
 
   const events = [
     {
-      id:1,
+      id: 1,
       time: "3:00 PM - 5:00 PM",
       name: "Marvin McKinney",
       location: "ALFALAH",
@@ -105,7 +101,7 @@ function Confirmd(props) {
       ],
     },
     {
-      id:2,
+      id: 2,
       time: "9:00 PM - 11:00 aM",
       name: "suresh McKinney",
       location: "ALFALAH",
@@ -125,7 +121,7 @@ function Confirmd(props) {
   ];
   const events2 = [
     {
-      id:3,
+      id: 3,
       time: "3:00 PM - 5:00 PM",
       name: "Marvin McKinney",
       location: "ALFALAH",
@@ -143,7 +139,7 @@ function Confirmd(props) {
       ],
     },
     {
-      id:4,
+      id: 4,
       time: "9:00 PM - 11:00 aM",
       name: "suresh McKinney",
       location: "ALFALAH",
@@ -163,7 +159,7 @@ function Confirmd(props) {
   ];
   const events3 = [
     {
-      id:5,
+      id: 5,
       time: "3:00 PM - 5:00 PM",
       name: "Marvin McKinney",
       location: "ALFALAH",
@@ -181,7 +177,7 @@ function Confirmd(props) {
       ],
     },
     {
-      id:6,
+      id: 6,
       time: "9:00 PM - 11:00 aM",
       name: "suresh McKinney",
       location: "ALFALAH",
@@ -280,7 +276,8 @@ function Confirmd(props) {
     height: "40px",
     borderRadius: "8px",
     color: "white",
-    background: "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
+    background:
+      "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
     fontSize: "12px",
     fontWeight: "400",
   };
@@ -296,24 +293,20 @@ function Confirmd(props) {
     background:
       "var(--btn, linear-gradient(90deg, #4A78A1 22.43%, #56B9CF 96.11%, #57BDD3 102.05%))",
     fontSize: "12px",
-    
   };
   const getStyles1 = (currentDay) => {
     return isSameDay(currentDay, selectedDate) ? selectedStyle1 : null;
   };
-  
+
   const greenDays = [
     new Date(2024, 0, 7),
     new Date(2024, 0, 9),
     new Date(2024, 0, 12),
     new Date(2023, 11, 19),
     new Date(2023, 11, 21),
-  
   ];
-  // const renderCalendarItems = (data) => {
-  //   return
-  // }
-  const navigate=useNavigate()
+ 
+  const navigate = useNavigate();
   return (
     <div className="confirmd-main">
       <div className="header1">
@@ -321,7 +314,6 @@ function Confirmd(props) {
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/f156499a2cad223800b453ff5712eda63b8b6b2c2676f1ecf9a7e04a4c0dba84?"
           className="header-image"
-        
         ></img>
 
         <div className="header-info"></div>
@@ -332,160 +324,159 @@ function Confirmd(props) {
         greenDays={greenDays}
       />
       <div className="border1"></div>
-      <div className="desktopmain"> 
+      <div className="desktopmain">
         <div className="desktopcalendar  mt-[-40px] mr-auto">
-        <Deskcalendar1 
-        onDateClick={onDateClick}
-        greenDays={greenDays} 
-        isRedDay={isRedDay}
-        getStyles1={getStyles1}/>
-          
+          <Deskcalendar1
+            onDateClick={onDateClick}
+            greenDays={greenDays}
+            isRedDay={isRedDay}
+            getStyles1={getStyles1}
+          />
         </div>
         <div className="desktopseconddiv">
-     
-
-      {clicked && selectedRedDayData ? (
-        selectedRedDayData.map((item) => (
-          <React.Fragment key={item.id}>
-            <div className="event-details" key={item.id}>
-              <div className="monthone">
-                <p style={{ marginBottom: "0px" }}>
-                  {format(selectedDate, "MMM ")}
-                </p>
-                <p>{format(selectedDate, "d")}</p>
-              </div>
-              <div className="event-info-start">
-                <div className="event-info">
-                  <p className="event-time">{item.time}</p>
-                  <p className="event-name">{item.name}</p>
-                  <p className="event-location">{item.location}</p>
-                  <div className="event-link">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      style={{ color: "#000000" }}
-                    >
-                      {item.link}
-                    </a>
+          {clicked && selectedRedDayData ? (
+            selectedRedDayData.map((item) => (
+              <React.Fragment key={item.id}>
+                <div className="event-details" key={item.id}>
+                  <div className="monthone">
+                    <p style={{ marginBottom: "0px" }}>
+                      {format(selectedDate, "MMM ")}
+                    </p>
+                    <p>{format(selectedDate, "d")}</p>
                   </div>
-                </div>
-                <div className="event-title text-base">{item.title}</div>
-                <div className="event-members">
-                  <div className="member-info">
-              
-                    <img
-                      loading="lazy"
-                      src={item.members[0].image}
-                      height="50px"
-                      width="50px"
-                    />
-                    <div className="member-details">
-                      <p className="member-name">
-                        {item.members[0].name}
-                        <p className="member-role text-xs">
-                          {item.members[0].role} (Team Leader)
-                        </p>
-                      </p>
+                  <div className="event-info-start">
+                    <div className="event-info">
+                      <p className="event-time">{item.time}</p>
+                      <p className="event-name">{item.name}</p>
+                      <p className="event-location">{item.location}</p>
+                      <div className="event-link">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          style={{ color: "#000000" }}
+                        >
+                          {item.link}
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div className="member-list">
-                    <p>Members</p>
-                    <div className="member-listimages">
-                      {item.members.slice(1).map((member, memberIndex) => (
+                    <div className="event-title text-base">{item.title}</div>
+                    <div className="event-members">
+                      <div className="member-info">
                         <img
-                          key={memberIndex}
                           loading="lazy"
-                          src={member.image}
+                          src={item.members[0].image}
+                          height="50px"
+                          width="50px"
                         />
-                      ))}
+                        <div className="member-details">
+                          <p className="member-name">
+                            {item.members[0].name}
+                            <p className="member-role text-xs">
+                              {item.members[0].role} (Team Leader)
+                            </p>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="member-list">
+                        <p>Members</p>
+                        <div className="member-listimages">
+                          {item.members.slice(1).map((member, memberIndex) => (
+                            <img
+                              key={memberIndex}
+                              loading="lazy"
+                              src={member.image}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      {item.countdownTime > 0 && (
+                        <p className="travel-time">{item.timetotravel}</p>
+                      )}
+                      {!eventEnded[item.id] && item.countdownTime <= 0 && (
+                        <p className="travel-time">{item.timetoend}</p>
+                      )}
+                      {meetingEnded && (
+                        <p className="travel-time">{item.ended}</p>
+                      )}
+                    </div>
+                    <div>
+                      <div className="action1-buttons">
+                        {item.countdownTime > 0 && (
+                          <button className="approved1-button">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="12"
+                              viewBox="0 0 16 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M5.54393 9.92722L14.3459 1.1253C14.4433 1.02787 14.559 0.97594 14.693 0.969523C14.8269 0.963107 14.9491 1.01503 15.0593 1.1253C15.1696 1.23555 15.2247 1.35446 15.2247 1.48202C15.2247 1.60959 15.1696 1.7285 15.0593 1.83875L6.1093 10.7887C5.94777 10.9503 5.75931 11.0311 5.54393 11.0311C5.32855 11.0311 5.14009 10.9503 4.97855 10.7887L0.928553 6.73875C0.831103 6.64132 0.780137 6.52562 0.775653 6.39165C0.77117 6.25767 0.824054 6.13555 0.934304 6.0253C1.04457 5.91503 1.16349 5.8599 1.29105 5.8599C1.41862 5.8599 1.53753 5.91503 1.64778 6.0253L5.54393 9.92722Z"
+                                fill="white"
+                              />
+                            </svg>
+                            <CountdownTimer
+                              timeInSeconds={item.countdownTime}
+                              onTimerExpired={() =>
+                                console.log(`Time to leave for ${item.name}`)
+                              }
+                            />
+                          </button>
+                        )}
+                        {!eventEnded[item.id] && item.countdownTime <= 0 && (
+                          <button
+                            className="new-button"
+                            onClick={() => handleMarkAsEnded(item.id)}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="12"
+                              viewBox="0 0 16 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M5.54393 9.92722L14.3459 1.1253C14.4433 1.02787 14.559 0.97594 14.693 0.969523C14.8269 0.963107 14.9491 1.01503 15.0593 1.1253C15.1696 1.23555 15.2247 1.35446 15.2247 1.48202C15.2247 1.60959 15.1696 1.7285 15.0593 1.83875L6.1093 10.7887C5.94777 10.9503 5.75931 11.0311 5.54393 11.0311C5.32855 11.0311 5.14009 10.9503 4.97855 10.7887L0.928553 6.73875C0.831103 6.64132 0.780137 6.52562 0.775653 6.39165C0.77117 6.25767 0.824054 6.13555 0.934304 6.0253C1.04457 5.91503 1.16349 5.8599 1.29105 5.8599C1.41862 5.8599 1.53753 5.91503 1.64778 6.0253L5.54393 9.92722Z"
+                                fill="white"
+                              />
+                            </svg>
+                            Mark as ended
+                          </button>
+                        )}
+                        {eventEnded[item.id] && (
+                          <button className="new-button1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="12"
+                              viewBox="0 0 16 12"
+                              fill="none"
+                              color="#FF0800"
+                              style={{ color: "#4A7AA2" }}
+                            >
+                              <path
+                                d="M5.54393 9.92722L14.3459 1.1253C14.4433 1.02787 14.559 0.97594 14.693 0.969523C14.8269 0.963107 14.9491 1.01503 15.0593 1.1253C15.1696 1.23555 15.2247 1.35446 15.2247 1.48202C15.2247 1.60959 15.1696 1.7285 15.0593 1.83875L6.1093 10.7887C5.94777 10.9503 5.75931 11.0311 5.54393 11.0311C5.32855 11.0311 5.14009 10.9503 4.97855 10.7887L0.928553 6.73875C0.831103 6.64132 0.780137 6.52562 0.775653 6.39165C0.77117 6.25767 0.824054 6.13555 0.934304 6.0253C1.04457 5.91503 1.16349 5.8599 1.29105 5.8599C1.41862 5.8599 1.53753 5.91503 1.64778 6.0253L5.54393 9.92722Z"
+                                fill="#4A7AA2"
+                              />
+                            </svg>
+                            Ended
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  {item.countdownTime > 0 && (
-                    <p className="travel-time">{item.timetotravel}</p>
-                  )}
-                  {!eventEnded[item.id] && item.countdownTime <= 0 && (
-                    <p className="travel-time">{item.timetoend}</p>
-                  )}
-                  {meetingEnded && <p className="travel-time">{item.ended}</p>}
                 </div>
-                <div>
-                  <div className="action1-buttons">
-                    {item.countdownTime > 0 && (
-                      <button className="approved1-button">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="12"
-                          viewBox="0 0 16 12"
-                          fill="none"
-                        >
-                          <path
-                            d="M5.54393 9.92722L14.3459 1.1253C14.4433 1.02787 14.559 0.97594 14.693 0.969523C14.8269 0.963107 14.9491 1.01503 15.0593 1.1253C15.1696 1.23555 15.2247 1.35446 15.2247 1.48202C15.2247 1.60959 15.1696 1.7285 15.0593 1.83875L6.1093 10.7887C5.94777 10.9503 5.75931 11.0311 5.54393 11.0311C5.32855 11.0311 5.14009 10.9503 4.97855 10.7887L0.928553 6.73875C0.831103 6.64132 0.780137 6.52562 0.775653 6.39165C0.77117 6.25767 0.824054 6.13555 0.934304 6.0253C1.04457 5.91503 1.16349 5.8599 1.29105 5.8599C1.41862 5.8599 1.53753 5.91503 1.64778 6.0253L5.54393 9.92722Z"
-                            fill="white"
-                          />
-                        </svg>
-                        <CountdownTimer
-                          timeInSeconds={item.countdownTime} 
-                          onTimerExpired={() =>
-                            console.log(`Time to leave for ${item.name}`)
-                          }
-                        />
-                      </button>
-                    )}
-                    {!eventEnded[item.id] && item.countdownTime <= 0 && (
-                      <button
-                        className="new-button"
-                        onClick={() => handleMarkAsEnded(item.id)}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="12"
-                          viewBox="0 0 16 12"
-                          fill="none"
-                        >
-                          <path
-                            d="M5.54393 9.92722L14.3459 1.1253C14.4433 1.02787 14.559 0.97594 14.693 0.969523C14.8269 0.963107 14.9491 1.01503 15.0593 1.1253C15.1696 1.23555 15.2247 1.35446 15.2247 1.48202C15.2247 1.60959 15.1696 1.7285 15.0593 1.83875L6.1093 10.7887C5.94777 10.9503 5.75931 11.0311 5.54393 11.0311C5.32855 11.0311 5.14009 10.9503 4.97855 10.7887L0.928553 6.73875C0.831103 6.64132 0.780137 6.52562 0.775653 6.39165C0.77117 6.25767 0.824054 6.13555 0.934304 6.0253C1.04457 5.91503 1.16349 5.8599 1.29105 5.8599C1.41862 5.8599 1.53753 5.91503 1.64778 6.0253L5.54393 9.92722Z"
-                            fill="white"
-                          />
-                        </svg>
-                        Mark as ended
-                      </button>
-                    )}
-                    {eventEnded[item.id] && (
-                      <button className="new-button1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="12"
-                          viewBox="0 0 16 12"
-                          fill="none"
-                          color="#FF0800"
-                          style={{ color: "#4A7AA2" }}
-                        >
-                          <path
-                            d="M5.54393 9.92722L14.3459 1.1253C14.4433 1.02787 14.559 0.97594 14.693 0.969523C14.8269 0.963107 14.9491 1.01503 15.0593 1.1253C15.1696 1.23555 15.2247 1.35446 15.2247 1.48202C15.2247 1.60959 15.1696 1.7285 15.0593 1.83875L6.1093 10.7887C5.94777 10.9503 5.75931 11.0311 5.54393 11.0311C5.32855 11.0311 5.14009 10.9503 4.97855 10.7887L0.928553 6.73875C0.831103 6.64132 0.780137 6.52562 0.775653 6.39165C0.77117 6.25767 0.824054 6.13555 0.934304 6.0253C1.04457 5.91503 1.16349 5.8599 1.29105 5.8599C1.41862 5.8599 1.53753 5.91503 1.64778 6.0253L5.54393 9.92722Z"
-                            fill="#4A7AA2"
-                          />
-                        </svg>
-                        Ended
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </div>
+                <div className="border"></div>
+              </React.Fragment>
+            ))
+          ) : (
+            <div className="nomeeting">
+              <p>No meeting scheduled</p>
+              <img src={img1} alt="" />
             </div>
-            <div className="border"></div>
-          </React.Fragment>
-        ))
-      ) : (
-        <div className="nomeeting">
-          <p>No meeting scheduled</p>
-          <img src={img1} alt="" />
+          )}
         </div>
-      )}
       </div>
-       </div>
     </div>
   );
 }

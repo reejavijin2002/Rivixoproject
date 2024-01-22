@@ -71,7 +71,7 @@
     color: #121212;
     text-align: center;
     font-family: 'Satoshi';
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -82,7 +82,7 @@
     color: #ACACAC;
     text-align: center;
     font-family: 'Satoshi';
-    font-size: 14px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -133,21 +133,23 @@
 .status {
     color: #1DCC00;
     font-family: 'Satoshi';
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-top: 20px;
+    display: flex;
 }
 
 .status-unavlble {
     color: #FF0800;
     font-family: 'Satoshi';
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-top: 10px;
+    display: flex;
 }
 
 .padd-20 {
@@ -321,7 +323,7 @@
         width: 50%;
         padding: 30px;
     }
-    .member-list {
+    .member-list98 {
         display: none !important;
     }
     .firstdiv {
@@ -349,5 +351,45 @@
         height: 20px;
         margin-top: 10px;
         width: 10%;
+    }
+    .details h3 {
+        color: #121212;
+        text-align: center;
+        font-family: 'Satoshi';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 15px;
+    }
+    .details p {
+        color: #ACACAC;
+        text-align: center;
+        font-family: 'Satoshi';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: -15px;
+    }
+    .status {
+        color: #1DCC00;
+        font-family: 'Satoshi';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 20px;
+        display: flex;
+    }
+    .status-unavlble {
+        color: #FF0800;
+        font-family: 'Satoshi';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+        display: flex;
     }
 }

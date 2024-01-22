@@ -21,12 +21,9 @@ function MyComponent(props) {
   const { labelFormat } = props;
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [approvalStatus, setApprovalStatus] = useState({});
-  // const [showRejectPopup, setShowRejectPopup] = useState(false);
   const [isPopupActive, setIsPopupActive] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
-  // const [show, setShow] = useState(false);
   const [rejectReason, setRejectReason] = useState("");
-  // const [rejected, setRejected] = useState(false);
   const [isSaveClicked, setIsSaveClicked] = useState(false);
   const [isCancelClicked, setIsCancelClicked] = useState(false);
   const [isSaveButtonClicked, setIsSaveButtonClicked] = useState(false);
@@ -310,9 +307,7 @@ function MyComponent(props) {
       getSelectedDay(day);
     }
   };
-  // const renderCalendarItems = (data, arrayIndex) => {
-  //   return;
-  // };
+
   const navigate=useNavigate()
   const navigatefunction=()=>{
     navigate('/welcome')
@@ -323,14 +318,8 @@ function MyComponent(props) {
   return (
     <div className="pending-component">
       <div className="header1">
-      
-      
-        <FaArrowLeft onClick={navigatefunction} className="header-image"></FaArrowLeft>
-      
-        {/* <FaArrowLeft className='prev-arrow' onClick={() => navigate('/welcome')} /> */}
-
-
-        <div className="header-info bg"></div>
+      <FaArrowLeft onClick={navigatefunction} className="header-image"></FaArrowLeft>
+      <div className="header-info bg"></div>
       </div>
       <Calender2
         onSelectDate={(date) => setSelectedDate(date)}
@@ -340,7 +329,6 @@ function MyComponent(props) {
         getStyles={getStyles}
         
       />
-
       <div className="border1"></div>
       <div className="desktopmain">
         <div className="desktopcalendar mt-[-40px] mr-auto">

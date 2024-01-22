@@ -2,6 +2,7 @@
     background: linear-gradient(180deg, #4A78A1 0%, #56B9CF 33.85%, #57BDD3 99.54%);
     width: 100%;
     height: screen;
+    cursor: pointer;
 }
 
 .Login h3 {
@@ -141,7 +142,7 @@
 
 .validate {
     color: red;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @media only screen and (min-width: 790px) {
@@ -196,6 +197,7 @@
         display: flex;
         justify-content: center;
         margin-left: 20%;
+        cursor: pointer;
     }
     .input-mob-pswd {
         width: 58%;

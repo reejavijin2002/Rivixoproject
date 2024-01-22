@@ -1,6 +1,5 @@
 
-// import { DotsVerticalIcon } from '@heroicons/react/outline'
-// import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+
 import {
   add,
   eachDayOfInterval,
@@ -17,7 +16,7 @@ import {
 } from "date-fns";
 import {  useState } from "react";
 
-// import { FaAnchor } from "react-icons/fa";
+
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
 import "./desktop.css";
